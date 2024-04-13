@@ -5,6 +5,9 @@
 front/node_modules/
 menv/
 backlocatel/backlocatel/__pycache__/
+**/__pycache__/
+
+
 
 
 /node_modules
