@@ -4,10 +4,12 @@
 # Node
 front/node_modules/
 menv/
+__pycache__/
+
 
 /node_modules
 npm-debug.log
 yarn-error.log
 
 # Miscellaneous
-/.angular/cache
+.angular/cache
