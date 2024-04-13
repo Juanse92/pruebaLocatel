@@ -1,0 +1,30 @@
+<div style="padding-top: 95px; height: 100%;" class="grid">
+    <div style="text-align: end; padding-right: 15%;">
+    <!-- <form [formGroup]="formLogin" role="form"> -->
+
+        <div class="col-12">
+            <span>Numero de cuenta:&nbsp;</span>
+
+            <input pInputText type="text">
+        </div>
+
+        <br>
+        <div class="col-12">
+            <span>Monto a recargar: &nbsp;</span>
+
+            <input pInputText type="number" min="0">
+        </div>
+    </div>
+        <br>
+        <div>
+            <button pButton class="button-round button-gray text-color-white" 
+                type="button">Consignar</button>
+        </div>
+        <br>
+        <div>
+            <button pButton class="button-round button-gray text-color-white" 
+                type="button" (click)="login()">Iniciar sesión</button>
+        </div>
+    
+    <!-- </form> -->
+</div>

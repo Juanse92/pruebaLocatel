@@ -1,0 +1,27 @@
+<app-head></app-head>
+
+<div style="margin: 20px; margin-left:2cm;background-color: rgb(159, 248, 131);;">
+    <div class="sub-contenedor">
+        <div class="contenedor-cuadrado" style="display: flex;">
+          <div class="menu grid"  >
+            <div class="col-11">
+              <button class="button-menu" pButton routerLink="/locatel/consultarLogin">Consultar</button>
+            </div>
+            <div class="col-11">
+              <button class="button-menu" pButton routerLink="/locatel/consignarLogin">Consignar</button>
+            </div>
+            <div class="col-11">
+              <button class="button-menu" pButton routerLink="/locatel/retirarLogin">Retirar</button>
+            </div>
+          </div>
+          <div style="width:100%">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+    </div>
+  
+</div>
+ 
+<!-- </div>
+    <router-outlet></router-outlet>
+</div> -->

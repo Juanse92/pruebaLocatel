@@ -1,0 +1,50 @@
+<div style="padding-top: 95px; height: 100%;" class="grid">
+    <div style="text-align: end; padding-right: 15%;">
+    <form [formGroup]="formCrearUser" role="form">
+
+        <div class="col-12">
+            <span>Nombre:&nbsp;</span>
+
+            <input pInputText type="text" formControlName="username">
+        </div>
+
+        <br>
+        <div class="col-12">
+            <span>Correo: &nbsp;</span>
+
+            <input pInputText type="text" formControlName="email">
+        </div>
+        <br>
+        <div class="col-12">
+            <span>Monto inicial: &nbsp;</span>
+
+            <input pInputText type="number" min="0" [(ngModel)]="saldo" [ngModelOptions]="{standalone:true}">
+        </div>
+        <br>
+        <div class="col-12">
+            <span>Contraseña:&nbsp;</span>
+
+            <input pInputText type="password" formControlName="password">
+        </div>
+        <br>
+        <div class="col-12">
+            <span>Confirmar contraseña:&nbsp;</span>
+
+            <input type="password" formControlName="password2">
+        </div>
+    </form>
+
+    </div>
+        <br>
+        <div>
+            <button pButton class="button-round button-gray text-color-white" 
+                type="button" (click)="crearUser()">Registrar cuenta</button>
+        </div>
+        <br>
+        <div>
+            <button pButton class="button-round button-gray text-color-white" 
+                type="button" (click)="login()">Iniciar sesión</button>
+        </div>
+    
+    
+</div>

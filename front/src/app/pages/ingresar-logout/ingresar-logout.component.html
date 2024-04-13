@@ -1,0 +1,28 @@
+<div style="padding-top: 95px; height: 100%;" class="grid">
+    <form [formGroup]="formLogin" role="form">
+        <div class="col-12">
+            <span>Usuario:</span>
+        </div>
+        <div class="col-12">
+            <input pInputText type="text" id="asd" type="email" formControlName="username">
+        </div>
+
+        <br>
+        <div class="col-12">
+            <span>Contraseña:</span>
+        </div>
+        <div class="col-12">
+            <input type="password" formControlName="password">
+        </div>
+        <br>
+        <div>
+            <button pButton class="button-round button-gray text-color-white" 
+                type="button" (click)="login()">Ingresar</button>
+        </div>
+        <br>
+        <div>
+            <button pButton class="button-round button-gray text-color-white" 
+                type="button" (click)="registro()">Registrar cuenta</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,24 @@
+<!-- <p-toast position="bottom-center"></p-toast> -->
+
+<div class=" contenedor">
+    <div class="sub-contenedor">
+        <div class="contenedor-circular">
+            <img src="../../../assets/image/locatel.jpg" alt="" style="width: 100%;">
+        </div>
+        <div class="contenedor-cuadrado">
+            <ng-container *ngIf="FlagLogIn">
+                <app-ingresar-logout (FlagInOut)="chageView($event)"></app-ingresar-logout>
+            </ng-container>
+            <ng-container *ngIf="Flagregister">
+                <app-registrar-logout (FlagRegOut)="chageView($event)"></app-registrar-logout>
+            </ng-container>
+            <ng-container *ngIf="FlagRecarga">
+                <app-consignar-logout (FlagRegOut)="chageView($event)"></app-consignar-logout>
+            </ng-container>
+        </div>
+    </div>
+ 
+</div>
+<div class="footer">
+    <button pButton class="button-redondo" title="Consignar" (click)="chageView('consignar')">PSE</button>
+</div>
