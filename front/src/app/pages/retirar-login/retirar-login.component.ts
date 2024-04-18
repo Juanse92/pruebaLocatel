@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from 'primeng/api';
 import { Cuenta } from 'src/app/entities/cuenta';
 import { CuentaService } from 'src/app/service/cuenta.service';
 
@@ -11,6 +12,7 @@ export class RetirarLoginComponent implements OnInit {
 
   constructor(
     private cuentaService: CuentaService,
+    private messageService:MessageService
   ) { }
 
   idUser=JSON.parse(localStorage.getItem('sessionService')).idUser
@@ -39,6 +41,13 @@ export class RetirarLoginComponent implements OnInit {
       this.cuentaService.putCuenta(cuenta,this.idCuenta).then(resp=>this.saldoNuevo=0).then(resp=>{
         this.numeroR=Math.floor(10 + Math.random() * 89)
         this.flagNumeroRetiro=false
+      })
+    }else{
+      this.messageService.add({
+        key:'appToast',
+        severity: 'info', 
+        summary: 'Información', 
+        detail: 'Monto insuficiente' 
       })
     }
   }

@@ -31,6 +31,21 @@ import { Cuenta } from '../entities/cuenta';
     })
   }
 
+  putCuentanumero(cuenta: any,numero:number){
+    let urlEndPoint: string = 'http://localhost:8000/locatel/ncuenta/'+numero.toString();
+    return new Promise((resolve,reject)=>{
+      this.http.put<Cuenta>(urlEndPoint,cuenta,{headers: this.httpHeaders} )
+      .subscribe(
+        res=>{
+          resolve(res);
+        },
+        err => {
+          reject(err)
+        }
+      )
+    })
+  }
+
   getCuenta_id(id:string){
     let urlEndPoint: string = 'http://localhost:8000/locatel/'+id;
     return new Promise((resolve,reject)=>{

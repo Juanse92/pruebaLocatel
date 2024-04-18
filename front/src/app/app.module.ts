@@ -23,6 +23,11 @@ import { ConsignarLogoutComponent } from './pages/consignar-logout/consignar-log
 import { LoginComponent } from './pages/login/login.component';
 import { IngresarLogoutComponent } from './pages/ingresar-logout/ingresar-logout.component';
 import { UsuarioService } from './service/usuario.service';
+import { ToastModule } from 'primeng/toast';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+
+
 declare global{
   interface navegator{
     msSaveBlod?: (blod:any, defaultName?:string)=>boolean
@@ -55,8 +60,10 @@ declare global{
     DialogModule,
     CalendarModule,
     RadioButtonModule,
+    ToastModule,
+    ConfirmDialogModule
   ],
-  providers: [UsuarioService], // Registra tu servicio aquí
+  providers: [UsuarioService,MessageService,ConfirmationService], // Registra tu servicio aquí
 
   bootstrap: [AppComponent]
 })

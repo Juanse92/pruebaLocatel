@@ -23,6 +23,8 @@ import { ConsignarLoginComponent } from './consignar-login/consignar-login.compo
 import { RetirarLoginComponent } from './retirar-login/retirar-login.component';
 import { WebsiteRoutingModule } from './website-routing.module';
 import { CommonModule } from '@angular/common';
+import { ToastModule } from 'primeng/toast';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 
 
@@ -51,6 +53,8 @@ import { CommonModule } from '@angular/common';
     CalendarModule,
     RadioButtonModule,
     CommonModule,
+    ToastModule,
+    ConfirmDialogModule
   ],
   providers: [
     ParametroNavegacionService,

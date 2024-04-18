@@ -29,7 +29,27 @@ def find_cuenta(request,pk):
             cuenta2.save()
             return Response(cuenta2.data)
         else:
-            return Response(cuenta.errors, status=400)
+            return Response(cuenta2.errors, status=400)
+        
+
+
+@api_view(['PUT'])
+def find_cuenta_numero(request,ncuenta):
+    if request.method == 'PUT':
+        try:
+            cuenta = Cuentas.objects.get(numerocuenta=ncuenta)
+        except Cuentas.DoesNotExist:
+            return Response({"error": "La cuenta no existe"}, status=404)
+        saldo = request.data.get('saldo')
+        if saldo is not None:
+            cuenta.saldo = cuenta.saldo+saldo
+            cuenta.save()
+            serializer = CuentasSerializer(cuenta)
+            return Response(serializer.data)
+
+        return Response({"error": "No se proporcionó el saldo para actualizar"}, status=400)
+        
+
         
 
     
